@@ -41,37 +41,10 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Authorizat
         * `SPOTIFY_CLIENT_ID`
         * `SPOTIFY_SECRET_ID`
 
-* Deploy!
+* Deploy（Frame pre : other）!
 
-## Deploy to Heroku  
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2Fnovatorem%2Fnovatorem)
-- Create a Heroku application via the Heroku CLI or via the Heroku Dashboard. Connect the app with your GitHub repository and enable automatic builds <br>
-    `PS. automatic build means that everytime you push changes to remote, heroku will rebuild and redeploy the app.`
-    - To start the Flask server execute `heroku ps:scale web=1` once the build is completed.
-- Or click the `Deploy to Heroku` button above to automatically start the deployment process.
 
-## Run locally with Docker
-
-* You need to have [Docker](https://docs.docker.com/get-docker/) installed.
-
-* Add Environment Variables:
-    * `SPOTIFY_REFRESH_TOKEN`
-    * `SPOTIFY_CLIENT_ID`
-    * `SPOTIFY_SECRET_ID`
-  
-* To run the service, open a terminal in the root folder of the repo: <br>
-    Execute:
-    ```
-    docker compose up
-    ```
-* When finished, navigate to [http://localhost:5000/](http://localhost:5000/)
-    
-* To stop the service, open a terminal in the root folder of the repo: <br>
-    Execute:
-    ```
-    docker compose down
-    ```
 
 # Readme
 
@@ -89,9 +62,9 @@ Remove the `#` in front of `contentBar` in [line 81](https://github.com/Ironiese
 
 Have a string saying either "Vibing to:" or "Last seen playing:".
 
-* Change [`height` to `height + 40`](https://github.com/novatorem/novatorem/blob/5194a689253ee4c89a9d365260d6050923d93dd5/api/templates/spotify.html.j2#L1-L2) (or whatever `margin-top` is set to)
-* Uncomment [**.main**'s `margin-top`](https://github.com/novatorem/novatorem/blob/5194a689253ee4c89a9d365260d6050923d93dd5/api/templates/spotify.html.j2#L10)
-* Uncomment [currentStatus](https://github.com/novatorem/novatorem/blob/5194a689253ee4c89a9d365260d6050923d93dd5/api/templates/spotify.html.j2#L93)
+* Change [`height` to `height + 40`](https://github.com/Ironieser/spotify-playing/blob/master/api/templates/spotify.html.j2#L1-L2) (or whatever `margin-top` is set to)
+* Uncomment [**.main**'s `margin-top`](https://github.com/Ironieser/spotify-playing/blob/master/api/templates/spotify.html.j2#L10)
+* Uncomment [currentStatus](https://github.com/Ironieser/spotify-playing/blob/master/api/templates/spotify.html.j2#L93)
 
 ## Theme Templates
 
@@ -113,7 +86,7 @@ You can customize the appearance of your `Card` however you wish with URL params
 - `border_color` - Card border color _(hex color)_ without `#`
 
 Use `/?background_color=8b0000&border_color=ffffff` parameter like so:  
-&nbsp; <br> [![Spotify](https://novatorem.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)]()
+&nbsp; <br> [![Spotify](https://spotify-playing-ironieser.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff)](https://open.spotify.com/user/Ironieser)
 
 ## Spotify Logo
 
